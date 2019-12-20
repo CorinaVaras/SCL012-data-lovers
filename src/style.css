@@ -37,52 +37,63 @@
     background-position-x: right;
     background-repeat: no-repeat;
 }
-.sortBy {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 2px solid black;
-    font-size: 24px;
-    float: right;
-    height: 42px;
-    margin-right: 63px;
-    margin-left: 65px;
-    font-family: 'Tauri', sans-serif;
-    margin-top: 25px;
-}
 .filterChamp{ /* contenedor campeones */
     display: flex;
 	flex-wrap: wrap;
     justify-content: center;
+    background-color:rgb(66, 9, 9);
+}
+.containerSortBy{
+    background-color:rgb(66, 9, 9);
+}
+.sortBy {
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+    font-size: 24px;
+    color: white;
+    float: unset;
+    height: 50px;
+    margin-left: 63px;
+    font-family: 'Tauri', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .elementos{
     display: inline-grid;
     height: 370px;
     padding: 10px;
     margin: 20px;
-    border: 1px solid #937341;
+    border: 1px solid black;
     border-radius: 10px;
     color: whitesmoke;
-    background:rgb(147, 115, 65);
+    background:black;
     width: 250px;
     padding-top: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    
 }
-.img{
+.imgChamp{
 	height: 185px;
     width: 230px;
     transition: transform .5s ease;
     padding: 0px;
     border-radius: 10px;
 }
-.img:hover{
+.imgChamp:hover{
     transform: scale(1.1);
 }
-.containerSearch {
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
+.name {
+    font-family:'Tauri', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
+
+.tags {
+    font-size: 20px;
+
+}
+
 header div{
     display: flex;
     justify-content: left ;
@@ -155,6 +166,9 @@ body{
 .hidden{
 visibility: hidden;
 }
+
+
+
 footer{
     font-family:'Tauri', sans-serif;
     font-size: 15px;
@@ -181,23 +195,31 @@ footer{
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
-    padding: auto;
-    width: 50%;
-    height: 40%; /* Could be more or less, depending on screen size */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 750px;
+    height: 310px;
+    background: #080808;
+    border: 2px solid #AE8537;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .imgModal{
-    width: 100%;
+    padding: inherit;
+    width: 250px;
+    height: 270px;
+    float: left;
   }
-
-  #modal-blurb,#modal-name,#modal-magic,#modal-defense,#modal-difficulty,#modal-attack,#modal-title{
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
-      color:white;
-      background-color: #B4923B;
-     text-align: center;
-  }
+  
+  .blurbModal{
+    font-family:'Tauri', sans-serif;
+    color:white;
+    font-style: normal;  
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    text-align: center ;
+    }
 
   /*  Extra small devices (phones, 600px and down) */ 
   @media (min-width: 320px) and (max-width: 767px) {

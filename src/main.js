@@ -1,6 +1,7 @@
 import LoL from './data/lol/lol.js';
 import { filterChampions, sortChampions, searchChampions } from './data.js';
 
+
 const arrayChampions = [];
 
 /* eslint-disable guard-for-in */
@@ -8,21 +9,19 @@ const arrayChampions = [];
 for (const i in LoL.data) {
   arrayChampions.push(LoL.data[i]);
 }
+// const contenedor = document.getElementById('containerSearch');
+const contenedor = document.getElementById('root');
+const containerSort = document.getElementById('containerSortBy')
+const sort = document.getElementById('sortBy');
+const modal = document.getElementById('myModal');
 
-export const contenedor = document.getElementById('root');
-export const sort = document.getElementById('sortBy');
-export const modal = document.getElementById('myModal');
+
 
 const showModal = (champion) => {
   modal.style.display = 'block';
   document.getElementById('modal-splash').innerHTML = `<img class="imgModal" src="${champion.splash}">`;
-  document.getElementById('modal-splash').innerHTML = `<img class="imgModal" src="${champion.splash}">`;
-  document.getElementById('modal-name').innerHTML = `<h1> ${champion.name}</h1>`;
-  document.getElementById('modal-title').innerHTML = `<h2> ${champion.title} </h2>`;
-  document.getElementById('modal-attack').innerHTML = `<p>Ataque 🗡️ = ${champion.info.attack} </p>`;
-  document.getElementById('modal-defense').innerHTML = `<p>Defensa 🛡️ = ${champion.info.defense} </p>`;
-  document.getElementById('modal-magic').innerHTML = `<p>Magia 🔮 = ${champion.info.magic} </p>`;
-  document.getElementById('modal-difficulty').innerHTML = `<p> Dificultad⚔️ = ${champion.info.difficulty} </p>`;
+  document.getElementById('modal-blurb').innerHTML = `<p class="blurbModal">${champion.blurb}</p>`;
+
   modal.onclick = () => {
     modal.style.display = 'none';
   };
@@ -30,18 +29,21 @@ const showModal = (champion) => {
 
 export const filterDataByRol = (roles) => {
   contenedor.innerHTML = '';
-  contenedor.className = 'filterChamp'; // Style contenedor tarjetas
+  containerSort.className = 'containerSortBy';
   sort.className = 'sortBy';// Style para que este visible
+  contenedor.className = 'filterChamp'; // Style contenedor tarjetas
   const result = filterChampions(roles, arrayChampions);
-
   // eslint-disable-next-line array-callback-return
   result.map((element) => {
     contenedor.innerHTML += `<div class="elementos" id="${element.id}">
-    <img class="img" src="${element.splash}">
-    <h1 class="name">${element.name}</h1>
-    <h2 class"titulo"> Rol: ${element.tags}</h2>
-    <h3 class"titulo">${element.title}</h3>
-    <p class"titulo"> HP: ${element.stats.hp} ❤️ </p>
+    <img class="imgChamp" src="${element.splash}">
+    <p class="name">${element.name}</p>
+    <p class="name">${element.tags}</p>
+    <p class="info"> Attack: ${element.info.attack}</p>
+    <p class="info"> Defense: ${element.info.defense}</p>
+    <p class="info"> Magic: ${element.info.magic}</p>
+    <p class="info"> Difficulty: ${element.info.difficulty}</p>
+    
     </div>`;
   });
   // eslint-disable-next-line array-callback-return
@@ -64,11 +66,14 @@ export const sortBy = (sortAz) => {
   // eslint-disable-next-line array-callback-return
   result.map((element) => {
     contenedor.innerHTML += `<div class="elementos" id="${element.id}">
-    <img class="img" src="${element.splash}">
-    <h1 class="name">${element.name}</h1>
-    <h2 class"titulo"> Rol: ${element.tags}</h2>
-    <h3 class"titulo">${element.title}</h3>
-    <p class"titulo"> HP: ${element.stats.hp} ❤️ </p>
+    <img class="imgChamp" src="${element.splash}">
+    <p class="name">${element.name}</p>
+    <p class="name">${element.tags}</p>
+    <p class="info"> Attack: ${element.info.attack}</p>
+    <p class="info"> Defense: ${element.info.defense}</p>
+    <p class="info"> Magic: ${element.info.magic}</p>
+    <p class="info"> Difficulty: ${element.info.difficulty}</p>
+    
     </div>`;
     // eslint-disable-next-line array-callback-return
     result.map((i) => {
@@ -87,11 +92,13 @@ export const search = (e) => {
   // eslint-disable-next-line array-callback-return
   result.map((element) => {
     contenedor.innerHTML += `<div class="elementos" id="${element.id}">
-    <img class="img" src="${element.splash}">
-    <h1 class="name">${element.name}</h1>
-    <h2 class"titulo"> Rol: ${element.tags}</h2>
-    <h3 class"titulo">${element.title}</h3>
-    <p class"titulo"> HP: ${element.stats.hp} ❤️ </p>
+    <img class="imgChamp" src="${element.splash}">
+    <p class="name">${element.name}</p>
+    <p class="name">${element.tags}</p>
+    <p class="info"> Attack: ${element.info.attack}</p>
+    <p class="info"> Defense: ${element.info.defense}</p>
+    <p class="info"> Magic: ${element.info.magic}</p>
+    <p class="info"> Difficulty: ${element.info.difficulty}</p>
     </div>`;
   });
   e.preventDefault();

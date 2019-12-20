@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Syncopate&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Tauri&display=swap" rel="stylesheet">
   <link rel="icon" href="./img/iconLol.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </head>
 <body>
@@ -52,7 +53,8 @@
           <li class="botones" id="Support" href="#">Support</li>
         </ul>
       </nav>
-      <section class="containerSearch">
+      
+      <section class="hidden" id="containerSortBy">
         <select class="hidden" id="sortBy">
           <option value=""> Ordenar por </option>
           <option value="az">A-Z</option>
@@ -64,17 +66,16 @@
       </div>
     </div>
    </div>
-   <hr />
+   <!-- <hr /> -->
    <footer> &copy; 2019 Riot Games Inc. Todos los derechos reservados.</footer>
+
    <div id="myModal" class="modal">
       <div class="modal-content"> 
         <h1 id="modal-splash"> </h1>
-        <h1 id= "modal-name"> </h1> 
-        <h2 id="modal-title"> </h2>
-        <p  id="modal-attack"> </p>
-        <p  id="modal-defense"> </p>
-        <p  id="modal-magic"> </p>
-        <p  id="modal-difficulty"> </p>
+        <h1 id="modal-tags"> </h1>
+        <h1 id="modal-blurb"> </h1>
+       
+        <canvas id="myChart" width="400" height="150"></canvas>
       </div>
     </div>
   <script type="module" src="main.js"></script>
