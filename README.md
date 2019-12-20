@@ -11,7 +11,7 @@ La misión y visión de este sitio es llegar a los datos mas relevantes que quie
 
 ## Historia de usuario.
 
----------------------------------------------------------
+
 
 - **Luis Mario, 20 años,** Descargó el juego *League of Legends* e inició una partida para entrenar y conocer el juego, sin embargo nos cuenta que se sintió abrumado con tanta información sobre los campeones, a él le gustaría conocer a los campeones por sus habilidades y sus roles para así ir haciendose una idea al elegir champions cuando avance de niveles. 
 
@@ -43,7 +43,7 @@ La misión y visión de este sitio es llegar a los datos mas relevantes que quie
 
 ## Proceso de creación de CHOOSE CHAMPIONS.
 
----------------------------------------------------------
+
 
 - Se realizó la organización y planificacion del proyecto mediante sprints y usando [Trello](https://trello.com/b/tQjQahAJ/data-lovers)
 
@@ -57,21 +57,11 @@ y a la par se fue codeando y dando las funcionalidades en HTML, CSS Y JS.
 
 --------------------------------------------------------------------------------------------
 ## Construido con 🛠
--------------------------------------------------------------------------------------------------------------------------
+
 - JavaScript (ES6)
 - Vanilla JS
 - HyperText Markup Language (HTML)
 - Cascading Style Sheets (CSS)
 
---------------------------------------------------------------------------------------------
-## Website
--------------------------------------------------------------------------------------------------------------------------
-[CHOOSE CHAMPIONS](https://corinavaras.github.io/SCL012-data-lovers/src/)
 
-
-
-
-
-
-
-
+[CHOOSE CHAMPIONS](https://rinarive.github.io/SCL012-data-lovers/src/)
